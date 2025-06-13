@@ -144,7 +144,7 @@ int main() {
     int opcao, num;
 
     do {
-        printf("\n1 - Inserir numero\n2 - Exibir arvore\n3 - Exportar para DOT\n0 - Sair\nEscolha: ");
+        printf("\n1 - Inserir numero\n2 - Exibir arvore\n3 - Exportar para DOT\n4 - Exportar para PNG\n5 - Exportar para PDF\n0 - Sair\nEscolha: ");
         scanf("%d", &opcao);
 
         if (opcao == 1) {
@@ -168,6 +168,14 @@ int main() {
 
         else if (opcao == 3) {
             exportarParaDot(raiz, "arvore.dot");
+        }
+
+        else if (opcao == 4) {
+            system("dot -Tpng arvore.dot -o arvore.png");
+        }
+
+        else if (opcao == 5) {
+            system("dot -Tpdf arvore.dot -o arvore.pdf ");
         }
 
     } while (opcao != 0);
