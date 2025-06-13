@@ -1,0 +1,6 @@
+digraph {
+  A -> B
+  B -> C
+  C -> A
+  B -> D [color=red, label="peso 2"]
+}
